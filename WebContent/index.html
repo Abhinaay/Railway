@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Indian Railway Enquiry System</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body data-spy="scroll" data-target="#nav-menu-container">
+
+  <!--==========================
+  Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <a href="#hero"><img src="img/rail-logo.png" alt="" title="" /></img></a>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!--<h1 ><a href="#hero">Rail Enquiry</a></h1>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#hero">Home</a></li>
+          <li><a href="#find-train">Find Train</a></li>
+          <li><a href="#spot-train">Spot Your Train</a></li>
+          <li><a href="#pnr">PNR</a></li>
+          <li><a href="#route">Route</a></li>
+          <li><a href="#seat">Seat Availability</a></li>
+          <li><a href="#fare">Fare</a></li>
+          
+          <li class="menu-has-children"><a href="#station" >Station Code/Name</a>
+            <ul>
+              <li><a href="#station">Station Code -> Name </a></li>
+              <li><a href="#station">Station Name -> Code</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Home Section
+  ============================-->
+  <section id="hero">
+    <div class="hero-container">
+      <h1>Rail-Enquiry</h1>
+      <h2>Welcome to the Indian Railway Network</h2>
+      <h2>Happy Journey!!</h2>
+      <a href="#find-train" class="btn-get-started">Get Started</a>
+    </div>
+  </section><!-- #home -->
+
+  <main id="main">
+
+    
+    <!--==========================
+      Find Train Section
+    ============================-->
+    <section id="find-train">
+        <div class="container wow fadeInUp">
+            <div class="section-header pt-5 ">
+                <h2 class="section-title">Find Train</h2>
+            </div>
+            
+            
+          <form action="find-train.jsp">
+            <div class="form-group d-flex justify-content-center col-md-12 mt-4" id="find-train--select-row-1">
+                <input class="form-control col-md-4" id="find-train-input1" placeholder="Source" name="source">
+                <input class="form-control col-md-4 ml-3" id="find-train-input2" placeholder="Destination" name="destination">
+                <input type="date" class="form-control col-md-4 ml-3" id="find-train-input3" name="date1">
+                    
+            </div>
+                      
+            <div class="form-group d-flex justify-content-center col-md-12 mt-4" id="find-train--select-row-2">
+                <input type="submit" class="btn btn-success" value="Find" id="find-train-b1" >
+            </div>
+          </form>
+          
+            <div id="table6" class="table-responsive mt-4 hideit">  <!--By default this table is hidden using class hideit present in .css -->
+              <table class="table  table-striped ">
+                  <thead class="thead-light " align="center" >
+                    <tr>
+                      <th>Train No.</th>
+                      <th>Train Name</th>
+                      <th>Travel Time</th>
+                      <th>Source Dep-Time</th>
+                      <th>Destination Arr-Time</th>
+                      <th>Running Status</th> 
+                    </tr>
+                  </thead>
+                  <tbody align="center">
+                    <tr>
+                      <td>ssmnmm</td>
+                      <td>assasa</td>
+                      <td>asasas</td>
+                      <td>asasas</td>
+                      <td>asasas</td>
+                      <td>asasas</td>
+                      
+                    </tr>
+                  </tbody>
+                </table> 
+              </div>
+          
+        </div>
+        <div  class="container-fluid mt-5" id="img6-spot-train">
+            
+        </div>
+      </section><!-- #find train -->
+  
+    <!--==========================
+      Spot Train Section
+    ============================-->
+    <section id="spot-train">
+      <div class="container wow fadeIn">
+        <div class="section-header pt-5 ">
+            <h2 class="section-title">Live Train Running Status</h2>
+        </div>
+    	<form action="spot-train.jsp">    
+        <div class="form-inline mt-4 d-flex justify-content-center" >
+                <input type="text" placeholder="Enter Train Number" class="form-control" id="spot-train-input1" name="train-number">
+                <input type="text" placeholder="Enter Station Code" class="form-control ml-2 " id="spot-train-input2" name="station-code">
+                <input type="submit" class="btn m-2 btn-success" value="Find" id="spot-train-b1">
+        </div>
+        </form>
+        <span class="hideit"><br><label class="d-flex justify-content-center " id="sl2">dassdjkasjkdhasjkdhasjkhdjkashdjkashdjkashdjkasdhjhasdjhasbdasjhdgjhasdbsbajhdasjkdkjkd</label></span>
+        <div id="table1" class="table-responsive mt-4 hideit">  <!--By default this table is hidden using class hideit present in .css -->
+        
+          <table class="table  table-striped ">
+              <thead class="thead-light " align="center" >
+                <tr>
+                  <th>Scheduled Arrival</th>
+                  <th>Scheduled Departure</th>
+                  <th>Actual Arrival</th>
+                  <th>Actual Departure</th>
+                  <th>Late (in min)</th>
+                </tr>
+              </thead>
+              <tbody align="center">
+                <tr>
+                  <td>1adsads</td>
+                  <td>assasad/td>
+                  <td>asasas</td>
+                  <td>asasas</td>
+                  <td>asasas</td>
+                </tr>
+              </tbody>
+            </table> 
+          </div>
+          
+      </div>
+      <div  class="container-fluid mt-5" id="img-spot-train">
+             
+      </div>
+      
+    </section><!-- # -->
+
+    <!--==========================
+      PNR Section
+    ============================-->
+    <section id="pnr">
+      <div class="container wow fadeIn">
+          <div class="section-header mt-5">
+              <h2 class="section-title">PNR Status</h2>
+          </div>
+          
+          <form action="pnr.jsp">
+			          <div class="form-inline mt-4 d-flex justify-content-center" >
+			              <input type="text" placeholder="Enter PNR" class="form-control" id="pnr-input1" name="pnr">
+			              <input type="submit" class="btn btn-info m-2" value="Get Status" id="pnr-b1">
+			          </div>
+          </form>
+          
+          <div id="table2" class="table-responsive mt-4 hideit">  <!--By default this table is hidden using class hideit present in .css -->
+            <table class="table  table-striped ">
+                <thead class="thead-light " align="center" >
+                  <tr>
+                    <th>Date_Of_Journey</th>
+                    <th>Train Number</th>
+                    <th>Train Name</th>
+                    <th>Source</th>
+                    <th>Destination</th>
+                    <th>Boarding Point</th>
+                    <th>Chart Prepared</th>
+                    <th>Journey Class</th>
+                    <th>Total Passengers</th>
+                    
+                  </tr>
+                </thead>
+                <tbody align="center">
+                  <tr>
+                    <td>1</td>
+                    <td>assasadsads</td>
+                    <td>asasas</td>
+                    <td>asasas</td>
+                    <td>asasas</td>
+                    <td>asasas</td>
+                    <td>asasas</td>
+                    <td>asas21</td>
+                    <td>asas21</td>
+                  </tr>
+                </tbody>
+              </table> 
+            </div>
+            <div id="table4" class="table-responsive mt-4 hideit">  <!--By default this table is hidden using class hideit present in .css -->
+              <table class="table  table-striped ">
+                  <thead class="thead-light " align="center" >
+                    <tr>
+                      <th>Passenger No.</th>
+                      <th>Current Status</th>
+                      <th>Booking Status</th>
+                    </tr>
+                  </thead>
+                  <tbody align="center">
+                    <tr>
+                      <td>1asasa</td>
+                      <td>assasa</td>
+                      <td>asasas</td>
+                    </tr>
+                  </tbody>
+                </table> 
+              </div>
+      </div>
+      <div  class="container-fluid mt-5" id="img2-spot-train">
+             
+        </div>
+    </section><!-- #pnr -->
+
+    <!--==========================
+    Route Section
+    ============================-->
+    <section id="route">
+      <div class="container wow fadeIn">
+          <div class="section-header pt-5 ">
+              <h2 class="section-title">Train Route</h2>
+          </div>
+          <form action="route.jsp">
+          <div class="form-inline mt-4 d-flex justify-content-center" >
+                  <input type="text" placeholder="Enter Train Number" class="form-control" id="route-input1" name="train-number">
+                  <input type="submit" class="btn m-2 btn-success" value="Find" id="route-b1">
+          </div>
+          </form>
+          <div id="table3" class="table-responsive mt-4 hideit">  <!--By default this table is hidden using class hideit present in .css -->
+            <table class="table  table-striped ">
+                <thead class="thead-light " align="center" >
+                  <tr>
+                    <th>#</th>
+                    <th>Station Name</th>
+                    <th>Station Code</th>
+                    <th>Arrival</th>
+                    <th>Departure</th>
+                    <th>Distance</th>
+                    <th>Halt</th>
+                    <th>Day</th>
+                  </tr>
+                </thead>
+                <tbody align="center">
+                  <tr>
+                    <td>1asasa</td>
+                    <td>assasa</td>
+                    <td>asasas</td>
+                    <td>asasas</td>
+                    <td>asasas</td>
+                    <td>asasas</td>
+                    <td>asasas</td>
+                    <td>asas21</td>
+                  </tr>
+                </tbody>
+              </table> 
+            </div>
+            
+            
+        </div>
+        <div  class="container-fluid mt-5" id="img3-spot-train">
+             
+          </div>
+    </section><!-- #route -->
+
+    <!--==========================
+      Seats Section
+    ============================-->
+    <section id="seat">
+      <div class="container wow fadeInUp">
+          <div class="section-header pt-5 ">
+              <h2 class="section-title">Seat Availability</h2>
+          </div>
+      <form action="seat.jsp">
+          <div class="form-inline mt-4 d-flex justify-content-center" >
+                  <input type="text" placeholder="Enter Train Number" class="form-control" id="seat-input1" name="train-number">
+                  <select class="form-control col-md-3 ml-2" id="seat-input2" name="pref">
+                            <option>Prefered Class</option>
+                            <option>1A</option>
+                            <option>2A</option>
+                            <option>3A</option>
+                            <option>CC</option>
+                            <option>SL</option>
+                            <option>2S</option>
+                    </select>
+                  
+          </div>
+        
+        <div class="row mt-4">
+          <div class="form-group d-flex justify-content-center col-md-6" id="seat-select-row-1">
+              <input class="form-control col-md-6" id="seat-input3" placeholder="Source" name="source">
+              <input class="form-control col-md-6 ml-3" id="seat-input4" placeholder="Destination" name="destination">
+              
+          </div>
+              <div class="form-group  d-flex justify-content-center col-md-6" id="seat-select-row-2" >
+                <input type="date" class="form-control col-md-6" id="seat-input5" name=date>
+                  
+                <select class="form-control col-md-6 ml-3" id="seat-input6" name="quota">
+                        <option>Quota</option>
+                        <option>GN</option>
+                        <option>TQ</option>
+                        
+                </select>
+          	</div>
+        </div>
+        <span class="d-flex justify-content-center"><input type="submit" class="btn m-2 btn-info " value="Get Availability" id="seat-b1"></span>
+        </form>
+        
+          <div id="table5" class="table-responsive mt-2 hideit">  <!--By default this table is hidden using class hideit present in .css -->
+            <table class="table  table-striped ">
+                <thead class="thead-light " align="center" >
+                  <tr>
+                    <th>Date</th>
+                    <th>Status</th> 
+                  </tr>
+                </thead>
+                <tbody align="center">
+                  <tr>
+                    <td>ssmnmm</td>
+                    <td>assasa</td>
+                  </tr>
+                </tbody>
+              </table> 
+            </div>
+        
+      </div>
+      <div  class="container-fluid mt-5" id="img4-spot-train">
+          
+      </div>
+    </section><!-- #seat -->
+
+    <!--==========================
+      Fare Section
+    ============================-->
+    <section id="fare">
+      <div class="container wow fadeInUp">
+          <div class="section-header pt-5 ">
+              <h2 class="section-title">Fare Enquiry</h2>
+          </div>
+          <form action="fare.jsp">
+          <div class="form-inline mt-4 d-flex justify-content-center" >
+              <input type="text" placeholder="Enter Train Number" class="form-control" id="fare-input1" name="train-number">
+              <input type="submit" class="btn m-2 btn-info" value="Get Fare" id="fare-b1">
+          </div>       
+          <div class="row mt-4">
+              <div class="form-group d-flex justify-content-center col-md-12" id="fare-select-row-1">
+                  <input class="form-control col-md-6" id="fare-input2" placeholder="Source" name="source">
+                  <input class="form-control col-md-6 ml-3" id="fare-input3" placeholder="Destination" name="destination">
+                  
+              </div>
+              <div class="form-group  d-flex justify-content-center col-md-12" id="fare-select-row-2" >
+                    <input class="form-control col-md-6" id="fare-input4" placeholder="Enter Age" name="age">
+                          
+                    <select class="form-control col-md-6 ml-3" id="fare-input5" name="pref">
+                            <option>Prefered Class</option>
+                            <option>1A</option>
+                            <option>2A</option>
+                            <option>3A</option>
+                            <option>CC</option>
+                            <option>SL</option>
+                            <option>2S</option>
+                    </select>
+              </div>
+              <div class="form-group d-flex justify-content-center col-md-12" id="fare-select-row-2" >
+                  <input type="date" class="form-control col-md-6" id="fare-input6" name="date">
+                      
+                  <select class="form-control col-md-6 ml-3" id="fare-input7" name="quota">
+                          <option>Quota</option>
+                          <option>GN</option>
+                          <option>TQ</option>
+                          
+                  </select>
+                </div>
+               
+            </div>
+            
+            <div class="form-group d-flex justify-content-center mt-4 hideit"  id="fare-label1">
+                <label id="fl1"></label>
+
+            </div>
+            </form>
+      </div>
+      <div  class="container-fluid mt-5" id="img5-spot-train">
+          
+        </div>
+    </section><!-- #fare -->
+
+    <!--==========================
+      Station Section
+    ============================-->
+    
+    <section id="station">
+        <div class="container wow fadeInUp ">
+          <div class="row mt-4 mb-4">
+          <div class="section-header  col-md-6  ">
+                <h2 class="section-title pb-3">Station Code To Name</h2>
+             <form action="station-code.jsp">
+                <input type="text" placeholder="Enter Station Code" class="form-control" id="station-input1" name="station-code">
+                <span class="d-flex justify-content-center mt-4 hideit"><input type="submit" class="btn btn-success" value="Find" id="station-b1"></span>
+               <span class="hideit"> <br><label class="d-flex justify-content-center " id="sl1">asdasd</label></span>
+               </form>
+          </div>
+           <div class="section-header  col-md-6 ">
+                <h2 class="section-title pb-3">Station Name To Code</h2>
+                <form action="station-name.jsp">
+                <input type="text" placeholder="Enter Station Name" class="form-control" id="station-input2" name="station-name">
+                <span class="d-flex justify-content-center mt-4 hideit"><input type="submit" class="btn btn-success" value="Find" id="station-b2"></span>
+                <span class="hideit"><br><label class="d-flex justify-content-center " id="sl2">dasd</label></span>
+                </form>
+            </div>  
+              
+              
+          </div>            
+        </div>      
+          
+    </section>
+<script>
+	$.ajax({ 
+    type: 'GET', 
+    url: 'https://api.railwayapi.com/v2/route/train/12986/apikey/xds6jqmnmo/', 
+    data: { get_param: 'value' }, 
+    dataType: 'json',
+    success: function (data) { 
+        $.each(data, function(index, element) {
+            $('body').append($('<div>', 
+                alert("lkjhg");
+                
+            ));
+        });
+    }
+});
+	</script>
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>JavaHub</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+        Designed by <a href="https://bootstrapmade.com/">Abhinay Bhatt</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
